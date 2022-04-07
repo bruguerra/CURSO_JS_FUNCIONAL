@@ -37,3 +37,10 @@ const produtos = carrinho.meuMap(obterProdutos)
 const precosTotal = carrinho.meuMap(obterValorTotal)
 console.log(produtos)
 console.log(precosTotal)
+
+const qtdeMaiorQueZero = item => item.qtde > 0
+
+const nomeItensValido = carrinho.filter(qtdeMaiorQueZero)
+                                .map(obterProdutos)
+
+console.log(nomeItensValido)                                
